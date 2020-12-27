@@ -1,0 +1,65 @@
+/* ------ADVANTAGES------ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages {
+  background-color: var(--background-color);
+}
+
+.advantages__item {
+  min-width: 270px;
+  min-height: 101px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+
+  color: var(--main-secondary-color);
+}
+.advantages__list {
+  display: flex;
+}
+
+.advantages__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7143;
+  text-align: left;
+}
+
+.advantages__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--third-background-color);
+}
+
+.advantages__icon {
+  width: 70px;
+  height: 70px;
+}
+/* ------END ADVANTAGES------ */

@@ -1,0 +1,217 @@
+/* ------ BACKDROP------ */
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+  width: 528px;
+  min-height: 581px;
+
+  background-color: var(--secondary-accent-color);
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--secondary-accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal__icon {
+  width: 18px;
+  height: 18px;
+
+  fill: rgb(0, 0, 0);
+}
+
+.modal__button:hover .modal__icon {
+  fill: var(--accent-color);
+}
+
+.modal__text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-secondary-color);
+}
+
+.modal__input,
+.modal__textarea {
+  display: block;
+  width: 100%;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__input:focus,
+.modal__textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.modal__input:focus + .modal__infosvg {
+  fill: var(--accent-color);
+}
+
+.modal__input--sizes {
+  padding-left: 42px;
+  height: 40px;
+}
+
+.modal__textarea--sizes {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+}
+
+.modal__textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__label,
+.modal__textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.01em;
+}
+
+.modal__label {
+  margin-bottom: 10px;
+}
+
+.modal__label--last {
+  margin-bottom: 20px;
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: block;
+  margin-top: 4px;
+}
+
+.modal__infosvg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  fill: var(--main-secondary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__policy-link {
+  margin-left: 4px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.modal__policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  margin-bottom: 30px;
+}
+
+.modal__policy-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-color: var(--secondary-accent-color);
+  background-image: url(../images/vector.svg);
+  border: 2px solid var(--main-secondary-color);
+  border-radius: 2px;
+  border-color: var(--main-secondary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__policy-input:checked + .modal__policy-label::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.modal__policy-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
+
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border: none;
+  border-radius: 4px;
+  color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* ------ END BACKDROP------ */
