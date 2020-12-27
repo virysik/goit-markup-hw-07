@@ -574,11 +574,6 @@ ul {
 
 /* ------END FOOTER------ */
 /* ------ BACKDROP------ */
-.modal__form {
-  display: flex;
-  flex-direction: column;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -609,6 +604,11 @@ ul {
   background-color: var(--secondary-accent-color);
 }
 
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal__button {
   position: absolute;
   top: 8px;
@@ -625,6 +625,15 @@ ul {
   cursor: pointer;
 }
 
+.modal__text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--main-secondary-color);
+}
+
 .modal__icon {
   width: 18px;
   height: 18px;
@@ -635,16 +644,20 @@ ul {
   fill: var(--accent-color);
 }
 
-.modal__text {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: var(--main-secondary-color);
+.modal__input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__input,
+.modal__input:focus {
+  border-color: var(--accent-color);
+}
+
 .modal__textarea {
   display: block;
   width: 100%;
@@ -655,44 +668,8 @@ ul {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__input:focus,
 .modal__textarea:focus {
   border-color: var(--accent-color);
-}
-
-.modal__input:focus + .modal__infosvg {
-  fill: var(--accent-color);
-}
-
-.modal__input--sizes {
-  padding-left: 42px;
-  height: 40px;
-}
-
-.modal__textarea--sizes {
-  padding: 12px 16px;
-  height: 120px;
-  resize: none;
-}
-
-.modal__textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal__label,
-.modal__textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.667;
-  letter-spacing: 0.01em;
-}
-
-.modal__label {
-  margin-bottom: 10px;
-}
-
-.modal__label--last {
-  margin-bottom: 20px;
 }
 
 .modal__wrapper {
@@ -711,6 +688,44 @@ ul {
   height: 18px;
   fill: var(--main-secondary-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__input:focus + .modal__infosvg {
+  fill: var(--accent-color);
+}
+
+.modal__input--sizes {
+  padding-left: 42px;
+  height: 40px;
+}
+
+.modal__textarea--sizes {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+}
+
+.modal__textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__label {
+  margin-bottom: 10px;
+}
+
+.modal__label::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.01em;
+}
+
+.modal__label--last {
+  margin-bottom: 20px;
 }
 
 .modal__policy-link {
