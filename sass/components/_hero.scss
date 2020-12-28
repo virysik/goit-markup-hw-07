@@ -13,22 +13,22 @@
     url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-.hero__title {
-  width: 696px;
-  margin-right: auto;
-  margin-bottom: 30px;
-  margin-left: auto;
+  &__title {
+    width: 696px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 
-  color: var(--secondary-accent-color);
+    color: var(--secondary-accent-color);
+  }
 }
 
 .button {

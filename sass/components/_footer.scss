@@ -4,6 +4,24 @@
   padding-bottom: 60px;
 
   background-color: var(--secondary-background-color);
+
+  &__join {
+    margin-right: 93px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  &__contacts {
+    margin-right: 83px;
+  }
+
+  &__social-list {
+    width: 206px;
+  }
 }
 
 .contacts__text {
@@ -11,37 +29,21 @@
   font-size: 14px;
   line-height: 1.714;
   color: var(--secondary-accent-color);
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__link {
+  @extend .contacts__text;
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-
   color: rgba(255, 255, 255, 0.6);
-}
-
-.logo__second-part--dark {
-  color: var(--secondary-accent-color);
-}
-
-.contacts__text,
-.contacts__link:not(:last-child) {
-  margin-bottom: 9px;
 }
 
 .contacts__address {
   display: flex;
   flex-direction: column;
-}
-
-.footer__logo {
-  margin-bottom: 20px;
-}
-
-.footer__join {
-  margin-right: 93px;
 }
 
 .join__text,
@@ -56,20 +58,6 @@
   color: var(--secondary-accent-color);
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-}
-
-.footer__contacts {
-  margin-right: 83px;
-}
-
-.footer__social-list {
-  width: 206px;
-}
-
 .social-list__icon--fill {
   fill: currentColor;
 }
@@ -80,11 +68,11 @@
   border-radius: 50%;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.social-list__link--footer:hover,
-.social-list__link--footer:focus {
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .subscription__form {
@@ -105,14 +93,14 @@
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--secondary-background-color);
-}
 
-.subscription__mail::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
 
-  color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .submit {
@@ -134,13 +122,13 @@
   color: var(--secondary-accent-color);
   background-color: var(--accent-color);
   border-radius: 4px;
-}
 
-.submit__icon {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
+  &__icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
 
-  fill: var(--secondary-accent-color);
+    fill: var(--secondary-accent-color);
+  }
 }
 /* ------END FOOTER------ */
