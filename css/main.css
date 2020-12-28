@@ -631,8 +631,7 @@ ul {
   fill: black;
 }
 
-.modal__button:hover .modal__icon,
-.modal__button:focus .modal__icon {
+.modal__button:hover .modal__icon {
   fill: var(--accent-color);
 }
 

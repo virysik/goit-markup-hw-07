@@ -73,8 +73,7 @@
 
     fill: rgb(0, 0, 0);
 
-    .modal__button:hover &,
-    .modal__button:focus & {
+    .modal__button:hover & {
       fill: var(--accent-color);
     }
   }
